@@ -1,0 +1,266 @@
+JSON
+ 4. Создать внешний репозиторий c названием JSON.
+https://github.com/Kochevnik553/JSON
+
+ 5. Клонировать репозиторий JSON на локальный компьютер.
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT
+$ git clone https://github.com/Kochevnik553/JSON.git
+
+ 6. Внутри локального JSON создать файл “new.json”.
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ vim "new.json"
+
+ 7. Добавить файл под гит.
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git add "new.json"
+
+ 8. Закоммитить файл.
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git commit -m "create new.json"
+
+ 9. Отправить файл на внешний GitHub репозиторий.
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git push
+Expected 						
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+
+ {
+        "First name": "Bogdan",
+        "Sername name": "Kozlov",
+        "Middle name": "Gennad'evich",
+        "Age": "29",
+        "Pets": "0",
+        "Expected pay": "1200 - 3000+ USD"
+}
+
+11. Отправить изменения на внешний репозиторий.
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git add "new.json"
+
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git commit -m "change new.json"
+
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git pushЕМSea
+ 12. Создать файл preferences.json
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ vim "new.json"
+
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+ {
+	"Movie": "They Fought for Their Country",
+	"TVshow": "The Expanse",
+	"Food": "Chicken with potatoes",
+	"Season": "Summer & Winter",
+	"Country": "Georgia"
+}
+
+14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+{
+
+        "Skil 1": "GitBash",
+        "Skil 2": "JavaScript",
+        "Skil 3": "Git Hub",
+        "Skil 4": "Client-Server architecture",
+        "Skil 5": "to be continued ..."
+}
+
+ 15. Отправить сразу 2 файла на внешний репозиторий.
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git add .
+
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git commit -m "create preferences.json & skils.json"
+
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git push
+
+ 16. На веб интерфейсе создать файл bug_report.json.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 20. Синхронизировать внешний и локальный репозиторий JSON
+Богдан@MACHINE MINGW64 /D/QA study/GIT/HW1 GIT/json (main)
+$ git pull
+
+
+--
+XML
+ 21. Создать внешний репозиторий c названием XML.
+https://github.com/Kochevnik553/XML
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+Богдан@MACHINE MINGW64 /d/QA study/GIT
+$ git clone https://github.com/Kochevnik553/XML.git
+
+ 23. Внутри локального XML создать файл “new.xml”.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ vim "new.xml"
+
+ 24. Добавить файл под гит.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git add "new.xml"
+
+ 25. Закоммитить файл.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git commit -m "create new.xml"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+<?xml version="1.1" encoding="UTF-8"?>
+<contact-info>
+    <FName>Bogdan</FName>
+    <SName>Kozlov</SName>
+    <MName>Gennad'evich</MName>
+    <Age>29</Age>
+    <Pets>0</Pets>
+    <ExpPay>1200 - 3000 + USD</ExpPay>
+</contact-info>
+
+ 28. Отправить изменения на внешний репозиторий.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git add new.xml
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git commit -m "change new.xml"
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git push
+
+ 29. Создать файл preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ vim "preferences.xml"
+
+<?xml version="1.1" encoding="UTF-8"?>
+<preferences>
+    <Movie>They Fought for Their Country</Movie>
+	<TVshow>The Expanse</TVshow>
+	<Food>Chicken with potatoes</Food>
+	<Season>Summer and Winter</Season>
+	<Country>Georgia</Country>
+</preferences>
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ vim "skils.xml"
+
+<?xml version="1.1" encoding="UTF-8"?>
+<skils>
+    <Skil>1.GitBash</Skil>
+    <Skil>2.JavaScript</Skil>
+    <Skil>3.Hub</Skil> 
+    <Skil>4.Client-Server architecture</Skil>
+    <Skil>5.be continued ...</Skil>
+</skils>
+
+32. Сделать коммит в одну строку.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git add .
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git commit -m "create preferences.xml and skils.xml"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/XML (main)
+$ git push
+
+ 34. На веб интерфейсе создать файл .
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 38. Синхронизировать внешний и локальный репозиторий XML
+
+--
+TXT
+ 1. Создать внешний репозиторий c названием TXT.
+https://github.com/Kochevnik553/TXT
+
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT
+$ git clone https://github.com/Kochevnik553/TXT.git
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ vim "new.txt"
+
+ 4. Добавить файл под гит.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git add new.txt
+
+ 5. Закоммитить файл.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git commit -m "create new.txt"
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git push
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+ Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ vim "new.txt"
+
+First name: Bogdan;
+Sername name: Kozlov;
+Middle name: Gennad'evich;
+Age: 29;
+Pets: 0;
+Expected pay: 1200 - 3000+ USD
+
+8. Отправить изменения на внешний репозиторий.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git add new.txt
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git commit -m "change new.txt"
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git push
+
+ 9. Создать файл preferences.txt
+ Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ vim preferences.txt
+
+10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+ PREFERENCES
+--
+Movie: They Fought for Their Country;
+TVshow: The Expanse;
+Food: Chicken with potatoes;
+Season: Summer & Winter;
+Country: Georgia.
+
+11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ vim skils.txt
+
+SKILS
+--
+Skil1: GitBash;
+Skil2: JavaScript;
+Skil3: Hub;
+Skil4: Client-Server architecture</Skil>
+Skil5: to be continued ...
+
+12. Сделать коммит в одну строку.
+ Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git add .
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git commit -m "create preferences.txt & skils.txt"
+
+13. Отправить сразу 2 файла на внешний репозиторий.
+ Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git push
+
+14. На веб интерфейсе создать файл bug_report.txt.
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+Богдан@MACHINE MINGW64 /d/QA study/GIT/HW1 GIT/txt (main)
+$ git pull
