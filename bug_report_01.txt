@@ -1,0 +1,17 @@
+BUG REPORT
+--
+        Id - 01
+        Summary:
+        Project:
+        Version:
+        Severity:
+        Priority:
+        Status:
+        Steps to reproduce:
+        Result:
+        Expected result:
+        Attachment's:
+--
+Author:
+Date:
+
