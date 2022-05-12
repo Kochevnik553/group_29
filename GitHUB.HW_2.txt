@@ -1,0 +1,101 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+Богдан@MACHINE MINGW64 /D/QA study/Git/group_29 (main)
+$ git branch Postman
+Богдан@MACHINE MINGW64 /D/QA study/Git/group_29 (main)
+$ git branch Jmeter
+Богдан@MACHINE MINGW64 /D/QA study/Git/group_29 (main)
+$ git branch CheckLists
+Богдан@MACHINE MINGW64 /D/QA study/Git/group_29 (main)
+$ git branch Bug_Reports
+Богдан@MACHINE MINGW64 /D/QA study/Git/group_29 (main)
+$ git branch SQL
+Богдан@MACHINE MINGW64 /D/QA study/Git/group_29 (main)
+$ git branch Charles
+Богдан@MACHINE MINGW64 /D/QA study/Git/group_29 (main)
+$ git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (main)
+$ git push --all
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (Bug_Reports)
+$ vim bug_report_01.txt
+BUG REPORT
+--
+        Id - 01
+        Summary:
+        Project:
+        Version:
+        Severity:
+        Priority:
+        Status:
+        Steps to reproduce:
+        Result:
+        Expected result:
+        Attachment's:
+--
+Author:
+Date:
+
+4. Запушить структуру багрепорта на внешний репозиторий
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (Bug_Reports)
+$ git add bug_report_01.txt
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (Bug_Reports)
+$ git commit -m "create bug report structure"
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (Bug_Reports)
+$ git push origin Bug_Reports
+
+5. Вмержить ветку Bag Reports в Main
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (Bug_Reports)
+$ git checkout main
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (main)
+$ git merge Bug_Reports
+
+6. Запушить main на внешний репозиторий.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (main)
+$ git push origin main
+
+7. В ветке CheckLists набросать структуру чек листа.
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (main)
+$ git checkout CheckLists
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (CheckLists)
+$ vim checklist.txt
+CHECKLIST
+--
+DATE:
+Specialist:
+Environment:
+--
+Group
+--
+Object:
+Result:
+
+8. Запушить структуру на внешний репозиторий
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (CheckLists)
+$ git add checklist.txt
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (CheckLists)
+$ git commit -m "create checklist structure"
+
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (CheckLists)
+$ git push origin CheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (main)
+$ git pull
