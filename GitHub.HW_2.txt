@@ -27,6 +27,9 @@ $ git branch Mobile_testing
 $ git push --all
 
 3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+Богдан@MACHINE MINGW64 /D/QA study/GIT/group_29 (main)
+$ git checkout Bug_Reports
+
 Богдан@MACHINE MINGW64 /d/QA study/GIT/group_29 (Bug_Reports)
 $ vim bug_report_01.txt
 BUG REPORT
