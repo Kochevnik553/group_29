@@ -1,0 +1,465 @@
+{
+	"info": {
+		"_postman_id": "64524ef6-ecaa-4337-b6a8-f2d6d2238af6",
+		"name": "29_Postman_HW_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18486233"
+	},
+	"item": [
+		{
+			"name": "first",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1. Отправить запроc\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"\r",
+							"// 2. Статус код 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// 3. Проверить, что в body приходит правильный string\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"This is the first responce from server!\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/first",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"first"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1. Отправить запрос.\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"    });\r",
+							"\r",
+							"// 2. Статус код 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"});\r",
+							"\r",
+							"// 3. Спарсить response body в json.\r",
+							"let jData = JSON.parse (responseBody);\r",
+							"console.log (\"jData:\",jData)\r",
+							"\r",
+							"// 4. Проверить, что name в ответе равно name s request\r",
+							"let check_name = jData.name\r",
+							"pm.test(\"name_s_request\", function () {\r",
+							"        pm.expect(check_name).to.eql(jData.name);\r",
+							"});\r",
+							"\r",
+							"//5. Проверить, что age в ответе равно age s request\r",
+							"let check_age = jData.age\r",
+							"pm.test(\"age_s_request\", function () {\r",
+							"       pm.expect(check_age).to.eql(jData.age);\r",
+							"});\r",
+							"\r",
+							"//6. Проверить, что salary в ответе равно salary s request\r",
+							"let salary_check = jData.salary\r",
+							"pm.test(\"salary_s_request\", function () {\r",
+							"        pm.expect(salary_check).to.eql(jData.salary);\r",
+							"});\r",
+							"\r",
+							"// 7. Спарсить request\r",
+							"let req = request.data;\r",
+							"console.log (\"req:\", req)\r",
+							"\r",
+							"// 8. Проверить, что name в ответе равно name s request\r",
+							"let req_name = req.name\r",
+							"pm.test(\"name_s_request\", function () {\r",
+							"       pm.expect(req_name).to.eql(req.name);\r",
+							"});\r",
+							"\r",
+							"// 9. Проверить, что age в ответе равно age s request\r",
+							"let req_age = req.age\r",
+							"pm.test(\"age_s_request\", function () {\r",
+							"       pm.expect(req_age).to.eql(req.age);\r",
+							"});\r",
+							"\r",
+							"// 10. Проверить, что salary в ответе равно salary s request\r",
+							"let req_salary = req.salary\r",
+							"pm.test(\"salary_s_request\", function () {\r",
+							"       pm.expect(req_salary).to.eql(req.salary);\r",
+							"});\r",
+							"\r",
+							"// 11. Вывести в консоль параметр family из response\r",
+							"let family_resp = jData.family.children;\r",
+							"console.log (\"family: \", family_resp);\r",
+							"\r",
+							"// 12. Проверить что u_salary_1_5_year в ответе равно salary*4\r",
+							"let salary4 = req.salary * 4;\r",
+							"let u_salary_1_5_year = jData.family.u_salary_1_5_year;\r",
+							"\r",
+							"console.log (salary4);\r",
+							"console.log (u_salary_1_5_year);\r",
+							"\r",
+							"pm.test(\"salary4\", function () {\r",
+							"        pm.expect(salary4).to.eql(u_salary_1_5_year);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Bogdan",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "29",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "650",
+							"type": "text"
+						},
+						{
+							"key": "auth_token",
+							"value": "/s34lfgbj/Bogdan/jjd909/67110kjkWpqc2646er554335310784evny",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/user_info_3",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1. Отправить запрос\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"\r",
+							"//2. Статус код 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// 3. Спарсить response body в json\r",
+							"let JData = JSON.parse (responseBody);\r",
+							"console.log (\"JData:\", JData)\r",
+							"\r",
+							"// 4. Спарсить request\r",
+							"let req = pm.request.url.query.toObject();\r",
+							"console.log (\"req:\", req)\r",
+							"\r",
+							"// 5. Проверить, что name в ответе равно name s request (name забрать из request.)\r",
+							"let name_s_request = req.name;\r",
+							"pm.test(\"name_s_request\", function () {\r",
+							"        pm.expect(req.name).to.eql(name_s_request);\r",
+							"});\r",
+							"\r",
+							"// 7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)\r",
+							"let salary_s_request = req.salary;\r",
+							"pm.test(\"salary_s_request\", function () {\r",
+							"        pm.expect(req.salary).to.eql(salary_s_request);\r",
+							"});\r",
+							"\r",
+							"// 8. Вывести в консоль параметр family из response.\r",
+							"let resp_family = JData.family;\r",
+							"console.log (\"resp_family:\",resp_family)\r",
+							"\r",
+							"// 9. Проверить, что у параметра dog есть параметры name.\r",
+							"pm.test (\"Checkout dog-->name\", function (){\r",
+							"    pm.expect (resp_family.pets.dog.name)\r",
+							"})\r",
+							"console.log (\"dog name:\",resp_family.pets.dog.name)\r",
+							"\r",
+							"// 10. Проверить, что у параметра dog есть параметры age.\r",
+							"pm.test (\"Checkout dog-->age\", function (){\r",
+							"    pm.expect (resp_family.pets.dog.age)\r",
+							"})\r",
+							"console.log (\"dog age:\",resp_family.pets.dog.age)\r",
+							"\r",
+							"// 11. Проверить, что параметр name имеет значение Luky.\r",
+							"pm.test (\"Checkout dog-->name: Luky\", function (){\r",
+							"    pm.expect (resp_family.pets.dog.name).to.eql (\"Luky\");\r",
+							"})\r",
+							"//console.log (\"dog name:\",resp_family.pets.dog.name)\r",
+							"\r",
+							"// 12. Проверить, что параметр age имеет значение 4.\r",
+							"pm.test (\"Checkout dog-->age: 4\", function (){\r",
+							"    pm.expect (resp_family.pets.dog.age).to.eql (4);\r",
+							"})\r",
+							"//console.log (\"dog age:\",resp_family.pets.dog.age)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_3?name=Bogdan&age=29&salary=650",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bogdan"
+						},
+						{
+							"key": "age",
+							"value": "29"
+						},
+						{
+							"key": "salary",
+							"value": "650"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1. Отправить запрос.\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"\r",
+							"// 2. Статус код 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// 3. Спарсить response body в json.\r",
+							"let JData = JSON.parse (responseBody)\r",
+							"console.log (\"JData:\",JData)\r",
+							"\r",
+							"// 4. Спарсить request.\r",
+							"let req = pm.request.url.query;\r",
+							"console.log (\"req:\", req)\r",
+							"\r",
+							"// 5. Проверить, что name в ответе равно name s request (name забрать из request.)\r",
+							"let name_s_request = req.name;\r",
+							"pm.test(\"name_s_request\", function () {\r",
+							"    pm.expect(req.name).to.eql(name_s_request);\r",
+							"})\r",
+							"\r",
+							"// 6. Проверить, что age в ответе равно age из request (age забрать из request.)\r",
+							"let age_s_request = req.age;\r",
+							"pm.test(\"age_s_request\", function () {\r",
+							"    pm.expect(req.age).to.eql(age_s_request);\r",
+							"})\r",
+							"\r",
+							"// 7. Вывести в консоль параметр salary из request.\r",
+							"console.log (\"req_salary:\", req.salary);\r",
+							"\r",
+							"// 8. Вывести в консоль параметр salary из response.\r",
+							"console.log (\"resp_salary:\", JData.salary);\r",
+							"\r",
+							"// 9. Вывести в консоль 0-й элемент параметра salary из response.\r",
+							"console.log (\"zero_salary:\", JData.salary[0]);\r",
+							"\r",
+							"// 10. Вывести в консоль 1-й элемент параметра salary параметр salary из response.\r",
+							"console.log (\"first_salary:\", JData.salary[1]);\r",
+							"\r",
+							"// 11. Вывести в консоль 2-й элемент параметра salary параметр salary из response.\r",
+							"console.log (\"second_salary:\", JData.salary[2]);\r",
+							"\r",
+							"// 12. Проверить, что 0-й элемент параметра salary равен salary из request (salary забрать из request.)\r",
+							"let zero_salary = req.salary[0];\r",
+							"let req_salary = req.salary;\r",
+							"pm.test(\"comparasion salary\", function() {\r",
+							"    pm.expect(req_salary).to.eql(zero_salary);\r",
+							"})\r",
+							"\r",
+							"// 13. Проверить, что 1-й элемент параметра salary равен salary*2 из request (salary забрать из request.)\r",
+							"let first_salary = req.salary[1];\r",
+							"let double_salary = req.salary*2;\r",
+							"pm.test(\"comparasion first salary\", function() {\r",
+							"    pm.expect(first_salary).to.eql(double_salary);\r",
+							"})\r",
+							"\r",
+							"// 14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)\r",
+							"//let second_resp_salary = JData.salary[2];\r",
+							"//let zero_req_salary = req.salary*3;\r",
+							"//pm.test(\"comparasion second salary\", function() {\r",
+							"//    pm.expect(second_req_salary).to.eql(zero_req_salary);\r",
+							"//})\r",
+							"\r",
+							"// 15. Создать в окружении переменную name\r",
+							"// 16. Создать в окружении переменную age\r",
+							"// 17. Создать в окружении переменную salary\r",
+							"// 18. Передать в окружение переменную name\r",
+							"// 19. Передать в окружение переменную age\r",
+							"// 20. Передать в окружение переменную salary\r",
+							"// 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary."
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Bogdan&age=29&salary=650",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bogdan"
+						},
+						{
+							"key": "age",
+							"value": "29"
+						},
+						{
+							"key": "salary",
+							"value": "650"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_4 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1. Отправить запрос.\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"\r",
+							"// 2. Статус код 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// 4. Спарсить request.\r",
+							"let req = pm.request;\r",
+							"console.log (\"req:\", req)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Bogdan&age=29&salary=650",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bogdan"
+						},
+						{
+							"key": "age",
+							"value": "29"
+						},
+						{
+							"key": "salary",
+							"value": "650"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
